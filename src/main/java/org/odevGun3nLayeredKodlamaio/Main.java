@@ -41,9 +41,8 @@ public class Main {
         courseList.add(course1);
 
 
-
         // Create Daos, Loggers, Managers
-        CourseDao [] courseDaos = {new JdbcDao(), new HibernateDao()};
+        CourseDao[] courseDaos = {new JdbcDao(), new HibernateDao()};
         Logger[] loggers = {new DatabaseLogger(), new EmailLogger(), new FileLogger()};
 
         CourseManager courseManager = new CourseManager(courseDaos, loggers, courseList);
@@ -53,7 +52,7 @@ public class Main {
 
 
         // CategoryDaos
-        CategoryDao [] categoryDaos = {new JdbcDao(), new HibernateDao()};
+        CategoryDao[] categoryDaos = {new JdbcDao(), new HibernateDao()};
         CategoryManager categoryManager = new CategoryManager(categoryDaos, loggers);
         System.out.println("\nCategory operations");
         categoryManager.add(category1);

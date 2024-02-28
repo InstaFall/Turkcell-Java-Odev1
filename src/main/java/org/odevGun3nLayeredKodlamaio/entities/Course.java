@@ -10,7 +10,8 @@ public class Course {
     private List<Instructor> instructors;
     private double coursePrice;
 
-    Course() {}
+    Course() {
+    }
 
     public Course(int courseId, String courseName, List<Instructor> instructors, double coursePrice) {
         this.courseId = courseId;

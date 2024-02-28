@@ -3,7 +3,6 @@ package org.odevGun3nLayeredKodlamaio.business;
 import org.odevGun3nLayeredKodlamaio.core.logging.Logger;
 import org.odevGun3nLayeredKodlamaio.dataAccess.InstructorDao;
 import org.odevGun3nLayeredKodlamaio.entities.Instructor;
-import org.odevGun3nLayeredKodlamaio.entities.Instructor;
 
 import java.util.List;
 
@@ -12,6 +11,7 @@ public class InstructorManager {
 
     InstructorDao[] instructorDaos;
     Logger[] loggers;
+
     public InstructorManager() {
     }
 
@@ -24,7 +24,7 @@ public class InstructorManager {
         this.instructorDaos = instructorDaos;
     }
 
-    public void add(Instructor instructor){
+    public void add(Instructor instructor) {
         // Check duplicate instructors
         if (isDuplicateInstructor(instructor)) {
             System.out.println("Instructor already exists");
@@ -33,11 +33,11 @@ public class InstructorManager {
 
         instructorList.add(instructor);
         for (Logger logger : loggers) {
-            logger.log("Added " + instructor.getFirstName() + " " + instructor.getLastName()+ " " + "into the instructor list!");
+            logger.log("Added " + instructor.getFirstName() + " " + instructor.getLastName() + " " + "into the instructor list!");
         }
 
-        System.out.println("\nAdding " + instructor.getFirstName() + " " +instructor.getLastName() + " into the databases...");
-        for (InstructorDao instructorDao : instructorDaos){
+        System.out.println("\nAdding " + instructor.getFirstName() + " " + instructor.getLastName() + " into the databases...");
+        for (InstructorDao instructorDao : instructorDaos) {
             instructorDao.add(instructor);
         }
     }
@@ -48,7 +48,7 @@ public class InstructorManager {
                     instructorToCheck.getFirstName().equals(instructor.getFirstName()) &&
                             instructorToCheck.getLastName().equals(instructor.getLastName())))
                 return true; // Found a duplicate
-            }
+        }
         return false; // No duplicates found
     }
 

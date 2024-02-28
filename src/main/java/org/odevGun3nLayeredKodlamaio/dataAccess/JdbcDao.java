@@ -20,7 +20,7 @@ public class JdbcDao implements CategoryDao, CourseDao, InstructorDao {
 
     @Override
     public void add(Instructor instructor) {
-        System.out.println("Instructor " + instructor.getFirstName() + " " +instructor.getLastName() + " " + " added into database with JDBC!");
+        System.out.println("Instructor " + instructor.getFirstName() + " " + instructor.getLastName() + " " + " added into database with JDBC!");
     }
 
     @Override

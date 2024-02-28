@@ -4,7 +4,6 @@ import org.odevGun3nLayeredKodlamaio.core.logging.Logger;
 import org.odevGun3nLayeredKodlamaio.dataAccess.CategoryDao;
 import org.odevGun3nLayeredKodlamaio.entities.Category;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

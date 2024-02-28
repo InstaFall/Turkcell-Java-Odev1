@@ -13,7 +13,8 @@ public class CourseManager {
     Logger[] loggers;
     List<Course> courseList;
 
-    CourseManager() {}
+    CourseManager() {
+    }
 
     public CourseManager(CourseDao[] courseDaos, Logger[] loggers) {
         this.courseDaos = courseDaos;
@@ -29,11 +30,11 @@ public class CourseManager {
     public void add(Course course) {
         // Condition checks
         if (isDuplicateCourse(course)) { // Duplicate course name
-            System.out.println("Course "+ course.getCourseName() + " already exists!");
+            System.out.println("Course " + course.getCourseName() + " already exists!");
             return;
         }
         if (course.getCoursePrice() < 0) { // Course price must be > 0
-            System.out.println("Price ("+ course.getCoursePrice() + ") of course " + course.getCourseName() + " is invalid!");
+            System.out.println("Price (" + course.getCoursePrice() + ") of course " + course.getCourseName() + " is invalid!");
             return;
         }
 
@@ -45,7 +46,7 @@ public class CourseManager {
 
         System.out.println("\nAdding " + course.getCourseName() + " to databases...");
         // Add to database
-        for (CourseDao courseDao: courseDaos) {
+        for (CourseDao courseDao : courseDaos) {
             courseDao.add(course);
         }
     }
@@ -64,7 +65,7 @@ public class CourseManager {
         List<Instructor> instructorList = course.getInstructors();
         System.out.println("Instructor list of the " + course.getCourseName());
         for (Instructor instructor : instructorList) {
-            System.out.println(instructor.getFirstName() + " " +instructor.getLastName());
+            System.out.println(instructor.getFirstName() + " " + instructor.getLastName());
         }
     }
 }

@@ -6,7 +6,7 @@ import org.odevGun3nLayeredKodlamaio.entities.Instructor;
 
 import java.util.List;
 
-public class HibernateDao implements CategoryDao, CourseDao, InstructorDao{
+public class HibernateDao implements CategoryDao, CourseDao, InstructorDao {
     @Override
     public void add(Category category) {
         System.out.println("Category " + category.getCategoryName() + " added into database with Hibernate!");
@@ -19,7 +19,7 @@ public class HibernateDao implements CategoryDao, CourseDao, InstructorDao{
 
     @Override
     public void add(Instructor instructor) {
-        System.out.println("Instructor " + instructor.getFirstName() + " "+ instructor.getLastName() + " " + " added into database with Hibernate!");
+        System.out.println("Instructor " + instructor.getFirstName() + " " + instructor.getLastName() + " " + " added into database with Hibernate!");
     }
 
     @Override

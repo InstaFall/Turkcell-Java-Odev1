@@ -1,4 +1,6 @@
-﻿Select ContactName Adi,CompanyName SirketAdi,City Sehir from Customers
+﻿SELECT * FROM Customers
+
+Select ContactName Adi,CompanyName SirketAdi,City Sehir from Customers
 
 Select*from Customers where City='Berlin'
 
